@@ -1,7 +1,11 @@
 <div class="card sv-bg-dark sv-border-accent text-center">
     <h3 class="card-header sv-header">{{ name }}</h3>
     <div class="card-body">
-        <h5>{{ pronouns[0] }} | {{ pronouns[1] }}</h5>
+        <h5>< {{ pronouns[0] }} / {{ pronouns[1] }} ></h5>
         <p class="text-start p-2">{{ bio }}</p>
+    </div>
+    <div class="card-footer fw-light d-flex justify-content-between">
+        <a title="GitHub" class="btn text-accent" href="https://github.com/joculatrix"><i class="fa-brands fa-github"></i> &#64;joculatrix</a>
+        <a class="btn text-accent" href="https://github.com/joculatrix/web_resume"><i class="fa-solid fa-code"></i> Source</a>
     </div>
 </div>

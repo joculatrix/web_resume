@@ -24,6 +24,12 @@ $palette:
     background-color: list.nth($palette, 4);
 }
 
+/* ---------- COLORS ---------- */
+
+.text-accent {
+    color: list.nth($palette, 1);
+}
+
 /* ---------- HTML ELEMENTS ---------- */
 
 body::before {
