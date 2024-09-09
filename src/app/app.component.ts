@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [],
-  template: ``,
+    selector: 'app-root',
+    standalone: true,
+    imports: [],
+    template: ``,
 })
 export class AppComponent {
-  title = 'web_resume';
+    title = 'web_resume';
 }
