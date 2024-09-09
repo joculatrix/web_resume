@@ -1,1 +1,66 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'sass:list';
+
+$palette:
+    #FF204E,
+    #A0153E,
+    #5D0E41,
+    #00224D,
+    #021526;
+
+/* ---------- FOR CARDS ---------- */
+
+.sv-bg-dark {
+    background-color: list.nth($palette, 5);
+    opacity: 75%;
+    color: #ffffff;
+}
+
+.sv-border-accent {
+    border: 2px solid list.nth($palette, 3);
+}
+
+.sv-header {
+    color: list.nth($palette, 1);
+    background-color: list.nth($palette, 4);
+}
+
+/* ---------- HTML ELEMENTS ---------- */
+
+body::before {
+    content: "";
+    z-index: -1;
+    position: inherit;
+    left: inherit;
+    top: inherit;
+    width: inherit;
+    height: inherit;
+    background-image: inherit;
+    filter: invert(11%) sepia(74%) saturate(440%) hue-rotate(196deg) brightness(32%) contrast(106%);
+}
+
+body {
+    background-image: url("../assets/what-the-hex-dark.png");
+    background-size: 0 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    font-family: "JetBrains Mono", system-ui;
+}
+
+
+@for $i from 1 through 6 {
+    @if $i <= 3 {
+        h#{$i}::before{
+            content: "> ";
+            color: #ffffff;
+        }
+    }
+
+    h#{$i} {
+        @if $i <= 5 {
+            color: list.nth($palette, 1);
+        }
+        font-family: "DM Mono", monospace;
+    }
+}
+
