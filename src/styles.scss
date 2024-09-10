@@ -21,6 +21,16 @@ $palette:
 
 /* ---------- CARDS ---------- */
 
+@keyframes card-anim {
+    from    { opacity: 0%; transform: translateY(12px); }
+    to      { opacity: 100%; }
+}
+
+.card {
+    animation-name: card-anim;
+    animation-duration: 500ms;
+}
+
 .sv-bg-dark {
     background-color: list.nth($palette, 5);
     opacity: 80%;

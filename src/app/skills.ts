@@ -1,6 +1,8 @@
+type Level = 1 | 2 | 3 | 4 | 5; // me-proof accident prevention conveniencetype
+
 export type Skill = {
     name: string;
-    level: number;
+    level: Level;
 };
 
 export type SkillCategory = {
@@ -12,16 +14,16 @@ export const skills: ReadonlyArray<SkillCategory> = [
     {
         name: 'Languages',
         skills: [
-            { name: 'Rust', level: 4 },
-            { name: 'C/C++', level: 3 },
-            { name: 'Java', level: 3 },
+            { name: 'Rust', level: 5 },
+            { name: 'C/C++', level: 4 },
+            { name: 'Java', level: 4 },
             { name: 'JavaScript', level: 3 },
             { name: 'SQL', level: 3 },
-            { name: 'Python', level: 2 },
+            { name: 'Python', level: 3 },
         ]
     },
     {
-        name: 'Containers',
+        name: 'Container Orchestration',
         skills: [
             { name: 'Docker', level: 3 },
             { name: 'Kubernetes', level: 3 },
@@ -30,10 +32,10 @@ export const skills: ReadonlyArray<SkillCategory> = [
     {
         name: 'Web Front-End',
         skills: [
-            { name: 'Angular', level: 3 },
+            { name: 'Angular', level: 4 },
             { name: 'React', level: 3 },
-            { name: 'Blazor', level: 2 },
-            { name: 'jQuery', level: 2 },
+            { name: 'Blazor', level: 3 },
+            { name: 'jQuery', level: 3 },
         ]
     }
 ]
