@@ -1,13 +1,13 @@
 <div class="card sv-bg-dark sv-border-accent">
     <div class="card-body">
         <h4 class="text-center">Skills</h4>
-        <div class="container p-2">
-            <div class="row row-cols-2 gy-1">
+        <div class="container h-100 d-flex align-items-center">
+            <div class="row gy-2">
                 @for (skillCategory of skills; track $index) {
-                    <div class="col text-end">
+                    <div class="col-lg-4 list-group-label">
                         {{ skillCategory.name }} <span class="text-accent fw-bold">></span>
                     </div>
-                    <div class="col">
+                    <div class="col-lg-8">
                         <div class="list-group sv-bg-dark">
                             @for (skill of skillCategory.skills; track $index) {
                                 <a class="list-group-item list-group-item-action d-flex justify-content-between">

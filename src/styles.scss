@@ -1,5 +1,7 @@
 @use 'sass:list';
 
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
 $palette:
     #FF204E,
     #A0153E,
@@ -10,12 +12,12 @@ $palette:
 /* ---------- BTN ---------- */
 
 .btn-sv {
-    border: 2px solid list.nth($palette, 2);
-    color: list.nth($palette, 2);
+    border: 2px solid list.nth($palette, 1);
+    color: list.nth($palette, 1);
 }
 
 .btn-sv:hover {
-    background-color: list.nth($palette, 2);
+    background-color: list.nth($palette, 1);
     color: list.nth($palette, 5);
 }
 
@@ -32,7 +34,7 @@ $palette:
 }
 
 .sv-bg-dark {
-    background-color: list.nth($palette, 5);
+    background-image: linear-gradient(list.nth($palette, 4), list.nth($palette, 5));
     opacity: 80%;
     color: #ffffff;
 }
@@ -56,6 +58,12 @@ $palette:
     background-color: list.nth($palette, 4);
 }
 
+@include media-breakpoint-up(lg) {
+    .list-group-label {
+        text-align: right;
+    }
+}
+
 /* ---------- COLORS ---------- */
 
 .text-accent {
@@ -77,14 +85,18 @@ body::before {
 }
 
 body {
-    background-image: url("../assets/what-the-hex-dark.png");
+    background-image: url("../public/assets/what-the-hex-dark.png");
     background-size: 0 0;
     width: 100%;
     height: 100%;
+    overflow: scroll;
     position: fixed;
     font-family: "JetBrains Mono", system-ui;
 }
 
+html {
+    overflow: scroll;
+}
 
 @for $i from 1 through 6 {
     @if $i <= 4 {
