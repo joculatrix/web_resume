@@ -7,11 +7,11 @@ $palette:
     #00224D,
     #021526;
 
-/* ---------- FOR CARDS ---------- */
+/* ---------- CARDS ---------- */
 
 .sv-bg-dark {
     background-color: list.nth($palette, 5);
-    opacity: 75%;
+    opacity: 80%;
     color: #ffffff;
 }
 
@@ -21,6 +21,16 @@ $palette:
 
 .sv-header {
     color: list.nth($palette, 1);
+    background-color: list.nth($palette, 4);
+}
+
+/* ---------- LIST GROUPS ---------- */
+
+.list-group-item {
+    background-color: list.nth($palette, 5);
+    color: #ffffff;
+}
+.list-group-item:hover {
     background-color: list.nth($palette, 4);
 }
 
@@ -55,7 +65,7 @@ body {
 
 
 @for $i from 1 through 6 {
-    @if $i <= 3 {
+    @if $i <= 4 {
         h#{$i}::before{
             content: "> ";
             color: #ffffff;
