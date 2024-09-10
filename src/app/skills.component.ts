@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 
-import { skills } from './skills';
+import { skills } from './data/skills';
 
 @Component({
     selector: 'skillsList',
     standalone: true,
     imports: [],
-    templateUrl: './skills.component.html',
+    templateUrl: './templates/skills.component.html',
 })
 export class SkillsComponent {
     skills = [...skills];

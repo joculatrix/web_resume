@@ -4,7 +4,7 @@ import { Component } from "@angular/core";
     selector: 'education',
     standalone: true,
     imports: [],
-    templateUrl: './education.component.html',
+    templateUrl: './templates/education.component.html',
 })
 export class EducationComponent {
     school_name = 'Western Colorado University';

@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 
-import { tidbits } from './tidbits';
+import { tidbits } from './data/tidbits';
 
 @Component({
     selector: 'about',
     standalone: true,
     imports: [],
-    templateUrl: './about.component.html',
+    templateUrl: './templates/about.component.html',
 })
 export class AboutComponent {
     name = 'Sloane Vaznis';
