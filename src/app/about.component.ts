@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { tidbits } from './tidbits';
+
 @Component({
     selector: 'about',
     standalone: true,
@@ -17,7 +19,5 @@ export class AboutComponent {
           'me a unique satisfaction. I love to get excited about abtract ' +
           'and theoretical topics! I am currently looking for work as a ' +
           'software developer or site reliability engineer.';
-    fav_language = 'Rust';
-    fav_IDE = 'VS Code';
-    fav_mono_font = 'JetBrains Mono';
+    tidbits = tidbits.map(tidbit => [Object.keys(tidbit)[0], Object.values(tidbit)[0]]);
 }

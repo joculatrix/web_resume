@@ -4,20 +4,16 @@
         <h5>< {{ pronouns[0] }} / {{ pronouns[1] }} ></h5>
         <p class="text-start p-2">{{ bio }}</p>
         <a title="Email" class="btn btn-sv" href="mailto:sloane.vaznis@gmail.com" role="button">Contact</a>
-        <div class="list-group sv-bg-dark mt-3">
-            <a class="list-group-item list-group-item-action d-flex justify-content-between">
-                <span class="text-accent text-bold">Favorite language</span>
-                <span>{{ fav_language }}</span>
-            </a>
-            <a class="list-group-item list-group-item-action d-flex justify-content-between">
-                <span class="text-accent text-bold">Favorite IDE</span>
-                <span>{{ fav_IDE }}</span>
-            </a>
-            <a class="list-group-item list-group-item-action d-flex justify-content-between">
-                <span class="text-accent text-bold">Favorite mono font</span>
-                <span>{{ fav_mono_font }}</span>
-            </a>
-        </div>
+        @if (tidbits) {
+            <div class="list-group sv-bg-dark mt-3">
+                @for (tidbit of tidbits; track $index) {
+                    <a class="list-group-item list-group-item-action d-flex justify-content-between">
+                        <span class="text-accent text-bold">{{ tidbit[0] }}</span>
+                        <span>{{ tidbit[1] }}</span>
+                    </a>
+                }
+            </div>
+        }
     </div>
     <div class="card-footer fw-light d-flex justify-content-between">
         <a title="GitHub" class="btn text-accent" href="https://github.com/joculatrix"><i class="fa-brands fa-github"></i> &#64;joculatrix</a>
