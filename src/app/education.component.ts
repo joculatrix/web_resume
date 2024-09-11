@@ -1,5 +1,7 @@
 import { Component } from "@angular/core";
 
+import { school } from './data/education';
+
 @Component({
     selector: 'education',
     standalone: true,
@@ -7,10 +9,5 @@ import { Component } from "@angular/core";
     templateUrl: './templates/education.component.html',
 })
 export class EducationComponent {
-    school_name = 'Western Colorado University';
-    degree = 'Bachelor of Arts - Music';
-    minors = ['Computer Science', 'Music Technology'];
-    grad_date = 'May 2024';
-
-    img_src = '/assets/wcu_logo.png';
+    school = school;
 }

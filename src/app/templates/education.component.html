@@ -1,21 +1,37 @@
 <div class="card sv-bg-dark sv-border-accent">
     <div class="card-body">
         <h4 class="text-center">Education</h4>
-        <div class="row">
-            <div class="col-3 d-flex align-items-center">
-                <img src="{{ img_src }}" class="img-fluid m-auto" />
-            </div>
+        <div class="row gy-2">
+			<div class="col-3 d-flex align-items-center">
+			@if (school.img_src) {
+					<img src="{{ school.img_src }}" class="img-fluid m-auto" />
+			}
+			</div>
             <div class="col-9">
                 <p>
-                    <span class="text-accent fw-bold">{{ school_name }}</span><br />
-                    {{ degree }}<br />
-                    Minors in @for(minor of minors; track $index; let last = $last){
-                        {{ minor }}@if (!last) {,&nbsp;}
-                    }
-                    <br />
-                {{ grad_date }}
+                    <span class="text-accent fw-bold">{{ school.school_name }}</span><br />
+                    {{ school.degree }}<br />
+					@if (school.minors) {
+						Minors in @for (minor of school.minors; track $index; let last = $last) {
+							{{ minor }}@if (!last) {,&nbsp;}
+						}
+						<br />
+					}
+                {{ school.grad_date }}
                 </p>
-                </div>
+            </div>
+			<div class="col-12">
+				@if (school.achievements) {
+					<span class="text-center text-accent">Achievements:</span>
+					<div class="list-group sv-bg-dark">
+					@for (achievement of school.achievements; track $index) {
+						<a class="list-group-item list-group-item-action">
+							{{ achievement }}
+						</a>
+					}
+					</div>
+				}
+			</div>
         </div>
     </div>
 </div>
