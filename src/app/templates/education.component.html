@@ -22,8 +22,8 @@
             </div>
 			<div class="col-12">
 				@if (school.achievements) {
-					<span class="text-center text-accent">Achievements:</span>
-					<div class="list-group sv-bg-dark">
+					<div class="text-accent text-center">Achievements:</div>
+					<div class="list-group sv-bg-dark mt-1">
 					@for (achievement of school.achievements; track $index) {
 						<a class="list-group-item list-group-item-action">
 							{{ achievement }}
