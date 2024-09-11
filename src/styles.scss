@@ -33,6 +33,12 @@ $palette:
     animation-duration: 500ms;
 }
 
+@include media-breakpoint-up(lg) {
+    .card {
+		min-height: 100%;
+	}
+}
+
 .sv-bg-dark {
     background-image: linear-gradient(list.nth($palette, 4), list.nth($palette, 5));
     opacity: 80%;
