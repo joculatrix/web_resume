@@ -33,6 +33,12 @@ $palette:
     animation-duration: 500ms;
 }
 
+@for $i from 1 through 5 {
+	.anim-#{$i} {
+		animation-delay: 100ms * $i;
+	}
+}
+
 @include media-breakpoint-up(lg) {
     .card {
 		min-height: 100%;
