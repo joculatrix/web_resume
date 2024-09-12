@@ -8,8 +8,8 @@
             <div class="list-group sv-bg-dark mt-3">
                 @for (tidbit of tidbits; track $index) {
                     <a class="list-group-item list-group-item-action d-flex justify-content-between">
-                        <span class="text-accent text-bold">{{ tidbit[0] }}</span>
-                        <span>{{ tidbit[1] }}</span>
+                        <span class="text-accent text-bold text-start">{{ tidbit[0] }}</span>
+                        <span class="text-end">{{ tidbit[1] }}</span>
                     </a>
                 }
             </div>
