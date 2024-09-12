@@ -12,7 +12,7 @@
                             @for (skill of skillCategory.skills; track $index) {
                                 <a class="list-group-item list-group-item-action d-flex justify-content-between">
                                     {{ skill.name }}
-                                    <span>
+                                    <span style="min-width: 6rem">
                                         @for (i of [1,2,3,4,5]; track $index) {
                                             @if (i <= skill.level) {
                                                 <i class="fa-solid fa-star text-accent"></i>
