@@ -4,11 +4,12 @@ import { AboutComponent } from './about.component';
 import { EducationComponent } from './education.component';
 import { SkillsComponent } from "./skills.component";
 import { WorkComponent } from "./work.component";
+import { ProjectsComponent } from "./projects.component";
 
 @Component({
     selector: 'app-root',
     standalone: true,
-    imports: [AboutComponent, EducationComponent, SkillsComponent, WorkComponent],
+    imports: [AboutComponent, EducationComponent, SkillsComponent, WorkComponent, ProjectsComponent],
     template: `
 <div class="container min-vw-75 m-2 d-flex justify-content-center">
     <div class="row g-3">
@@ -18,6 +19,9 @@ import { WorkComponent } from "./work.component";
         <div class="col-lg-8">
             <skillsList />
         </div>
+		<div class="col-lg-12">
+			<projects />
+		</div>
         <div class="col-lg-6">
             <education />
         </div>
