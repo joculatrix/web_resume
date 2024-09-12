@@ -33,7 +33,14 @@ export const skills: ReadonlyArray<SkillCategory> = [
             { name: 'Angular', level: 4 },
             { name: 'React', level: 3 },
             { name: 'Blazor', level: 3 },
-            { name: 'jQuery', level: 3 },
         ]
-    }
+    },{
+		name: 'Concepts',
+		skills: [
+			{ name: 'Object-oriented design', level: 5 },
+			{ name: 'Theory of Computation', level: 4 },
+			{ name: 'Agile methodology', level: 3 },
+			{ name: 'Information security', level: 3 },
+		]
+	}
 ]
