@@ -5,12 +5,14 @@
 			@for (job of jobs; track $index) {
 				<div class="col-6">
 					<h5>{{ job.title }}</h5>
-					{{ job.employer }}
 				</div>
 				<div class="col-6 text-end">
 					@if (job.dates) {
 						{{ job.dates[0] }} - {{ job.dates[1] }}
 					}
+				</div>
+				<div class="col-12">
+					{{ job.employer }}
 				</div>
 				<div class="col-12">
 					<div class="list-group sv-bg-dark">
