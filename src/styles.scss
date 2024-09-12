@@ -31,6 +31,7 @@ $palette:
 .card {
     animation-name: card-anim;
     animation-duration: 500ms;
+	animation-fill-mode: both;
 }
 
 @for $i from 1 through 5 {
