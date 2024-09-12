@@ -76,19 +76,25 @@ $palette:
     }
 }
 
-/* ---------- COLORS ---------- */
+/* ---------- MISC ---------- */
 
 .text-accent {
     color: list.nth($palette, 1);
 }
-
-/* ---------- HTML ELEMENTS ---------- */
 
 .row {
 	@include media-breakpoint-down(lg) {
 		--bs-gutter-y: 2.5rem;
 	}
 }
+
+.project-img {
+	@include media-breakpoint-up(lg) {
+		max-width: 65%;
+	}
+}
+
+/* ---------- HTML ELEMENTS ---------- */
 
 body::before {
     content: "";

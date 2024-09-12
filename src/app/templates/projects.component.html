@@ -5,7 +5,7 @@
 			<ngb-carousel>
 				@for (project of projects; track $index) {
 					<ng-template ngbSlide>
-						<img class="img-thumbnail mx-auto d-block mb-2" src="{{ project.img_src }}" style="max-width: 65%" />
+						<img class="img-thumbnail project-img mx-auto d-block mb-2" src="{{ project.img_src }}" />
 						<h5 class="text-center">{{ project.title }}</h5>
 						<p class="text-center">{{ project.desc }}</p>
 						<div class="text-center"><a class="btn btn-sv" role="button" href="{{ project.href }}">Link</a></div>
@@ -15,7 +15,7 @@
 		}
 		@else {
 			<div>
-				<img class="img-thumbnail mx-auto d-block mb-2" src="{{ projects[0].img_src }}" style="max-width: 65%" />
+				<img class="img-thumbnail project-img mx-auto d-block mb-2" src="{{ projects[0].img_src }}" />
 				<h5 class="text-center">{{ projects[0].title }}</h5>
 				<p class="text-center">{{ projects[0].desc }}</p>
 				<div class="text-center"><a class="btn btn-sv" role="button" href="{{ projects[0].href }}">Link</a></div>
