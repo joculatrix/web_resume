@@ -2,7 +2,7 @@
     <h3 class="card-header sv-header">{{ bio.name }}</h3>
     <div class="card-body">
         <h5>< {{ bio.pronouns[0] }} / {{ bio.pronouns[1] }} ></h5>
-        <p class="text-start p-2">{{ bio.desc }}</p>
+        <p class="p-2" style="text-align: justify; font-size: 0.875rem">{{ bio.desc }}</p>
         <a title="Email" class="btn btn-sv" href="mailto:sloane.vaznis@gmail.com" role="button">Contact</a>
         @if (tidbits) {
             <div class="list-group sv-bg-dark mt-3">

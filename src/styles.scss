@@ -84,6 +84,12 @@ $palette:
 
 /* ---------- HTML ELEMENTS ---------- */
 
+.row {
+	@include media-breakpoint-down(lg) {
+		--bs-gutter-y: 2.5rem;
+	}
+}
+
 body::before {
     content: "";
     z-index: -1;

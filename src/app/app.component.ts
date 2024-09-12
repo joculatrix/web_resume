@@ -11,7 +11,7 @@ import { ProjectsComponent } from "./projects.component";
     standalone: true,
     imports: [AboutComponent, EducationComponent, SkillsComponent, WorkComponent, ProjectsComponent],
     template: `
-<div class="container min-vw-75 m-2 d-flex justify-content-center">
+<div class="container min-vw-75 max-vw-100 p-2 d-flex justify-content-center">
     <div class="row g-3">
         <div class="col-lg-4">
             <about />
