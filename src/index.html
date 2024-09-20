@@ -14,8 +14,18 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1b4fb39f87.js" crossorigin="anonymous"></script>
+
+	<style>
+		.hidden {
+			visibility: hidden;
+		}
+	</style>
 </head>
 <body>
+	<script>
+		// only add 'hidden' to later be removed if javascript is enabled:
+		document.querySelector('body').classList.add('hidden');
+	</script>
     <div class="d-flex min-vh-100 justify-content-center align-items-center">
         <app-root></app-root>
     </div>

@@ -12,7 +12,7 @@ import { ProjectsComponent } from "./projects.component";
     standalone: true,
     imports: [AboutComponent, EducationComponent, SkillsComponent, WorkComponent, ProjectsComponent, NgStyle],
     template: `
-<div class="container min-vw-75 max-vw-100 p-2 d-flex justify-content-center" [ngStyle]="currentStyles">
+<div class="container min-vw-75 max-vw-100 p-2 d-flex justify-content-center">
     <div class="row g-3">
         <div class="col-lg-4">
             <about />
@@ -33,22 +33,9 @@ import { ProjectsComponent } from "./projects.component";
 </div>
 `,
 })
-export class AppComponent implements OnInit, AfterViewInit {
-	currentStyles: Record<string, string> = {};
-
-	// hide content to prevent flash-of-unstyled-content
-    ngOnInit(): void {
-		this.setCurrentStyles();
-	}
-
-	// should show content once document is ready
+export class AppComponent implements AfterViewInit {
+	// show content when ready (prevent flash of unstyled content)
 	ngAfterViewInit(): void {
-		this.setCurrentStyles();
-	}
-
-	setCurrentStyles() {
-		this.currentStyles = {
-			'visibility': document.readyState != 'loading' ? 'visible' : 'hidden',
-		};
+		document.querySelector('body')?.classList.remove('hidden');
 	}
 }
