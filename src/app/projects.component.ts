@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgbCarousel, NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { projects } from './data/projects';
 
@@ -9,6 +9,11 @@ import { projects } from './data/projects';
 	imports: [NgbCarouselModule],
 	templateUrl: './templates/projects.component.html'
 })
-export class ProjectsComponent {
+export class ProjectsComponent implements OnInit {
 	projects = [...projects];
+	@ViewChild('carousel') carousel!: NgbCarousel;
+
+	ngOnInit(): void {
+		this.carousel.pause();
+	}
 }

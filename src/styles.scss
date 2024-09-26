@@ -79,6 +79,23 @@ $palette:
 
 /* ---------- MISC ---------- */
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+	background-image: none;
+}
+
+.carousel-control-prev-icon:after {
+	content: '<';
+	font-size: 32px;
+	color: list.nth($palette, 1);
+}
+
+.carousel-control-next-icon:after {
+	content: '>';
+	font-size: 32px;
+	color: list.nth($palette, 1);
+}
+
 .text-accent {
     color: list.nth($palette, 1);
 }
@@ -92,6 +109,7 @@ $palette:
 .project-img {
 	@include media-breakpoint-up(lg) {
 		max-width: 65%;
+		height: 450px;
 	}
 }
 

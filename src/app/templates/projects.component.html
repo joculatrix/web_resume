@@ -2,7 +2,13 @@
 	<h3 class="card-header text-center text-accent">Projects</h3>
 	<div class="card-body m-3">
 		@if (projects.length > 1) {
-			<ngb-carousel>
+			<ngb-carousel
+				#carousel
+				[showNavigationIndicators]="false"
+				[pauseOnFocus]="true"
+				[pauseOnHover]="true"
+				[interval]="10000"
+			>
 				@for (project of projects; track $index) {
 					<ng-template ngbSlide>
 						<img class="img-thumbnail project-img mx-auto d-block mb-2" src="{{ project.img_src }}" />
